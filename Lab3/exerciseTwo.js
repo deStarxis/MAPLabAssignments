@@ -1,6 +1,6 @@
 class Subject {
   constructor() {
-    this.observerList = [];
+    this.observerList = {};
   }
 
   on(event, fn) {
@@ -35,3 +35,4 @@ subject.emit("study", "cs445");
 //output for Line above: subject.emit('study', 'cs445');
 // cs445
 // foo: cs445
+console.log(subject.observerList);
