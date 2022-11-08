@@ -2,10 +2,10 @@ let shoppingCart = (function () {
   let basket = [];
   return {
     upsertItem(item) {
-      if (!basket.includes(item)) {
+      let index = basket.findIndex((bas) => bas.id === item.id);
+      if (index === -1) {
         basket.push(item);
       } else {
-        let index = basket.findIndex((bas) => bas.id === item.id);
         basket[index] = item;
       }
     },
