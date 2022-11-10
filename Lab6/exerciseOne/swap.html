@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swap Images</title>
+  </head>
+  <body>
+    <div style="margin-top: 100px">
+      <div style="display: flex; justify-content: space-evenly">
+        <img src="one.png" id="imageOne" width="200" height="200" />
+        <img src="two.png" id="imageTwo" width="200" height="200" />
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-evenly">
+      <button
+        style="
+          color: black;
+          background-color: green;
+          font-size: large;
+          border-radius: 5px;
+        "
+        id="swapButton"
+      >
+        Swap
+      </button>
+    </div>
+    <script>
+      function Swap() {
+        return function () {
+          var idOne = document.getElementById("imageOne");
+          var idTwo = document.getElementById("imageTwo");
+          var id = idOne.src;
+          idOne.src = idTwo.src;
+          idTwo.src = id;
+        };
+      }
+      document.getElementById("swapButton").onclick = Swap();
+    </script>
+  </body>
+</html>
