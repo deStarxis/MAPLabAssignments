@@ -18,7 +18,7 @@ const primeAsync = async (num) => {
 };
 
 console.log("start");
-primeAsync(4);
+primeAsync(3);
 console.log("end");
 
 // Output:
